@@ -23,7 +23,7 @@ bash
 
 #!/bin/bash
 # Title: Windows 11 Scan Payload
-# Author: Your Name
+# Author: Tukru
 # Version: 1.0
 # Description: Scans Windows 11 for suspicious files and data
 
